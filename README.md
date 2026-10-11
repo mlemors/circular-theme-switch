@@ -2,7 +2,7 @@
 
 A circular dark/light reveal that expands from your click. Zero runtime dependencies.
 
-![Website and app theme switches in action](assets/demo.gif)
+![Website and app theme switches in action](assets/circular-theme-switch.gif)
 
 [**Live demo →**](https://mlemors.github.io/circular-theme-switch/demo/)
 

@@ -4,6 +4,6 @@
   "license": "MIT", "author": "mlemors",
   "repository": { "type": "git", "url": "https://github.com/mlemors/circular-theme-switch.git" },
   "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" }, "./style.css": "./src/style.css" },
-  "files": ["src", "LICENSE", "NOTICE.md", "CHANGELOG.md", "docs", "assets/demo.gif"],
+  "files": ["src", "LICENSE", "NOTICE.md", "CHANGELOG.md", "docs", "assets/circular-theme-switch.gif"],
   "scripts": { "test": "node --test", "demo": "python3 -m http.server 4173" }
 }
