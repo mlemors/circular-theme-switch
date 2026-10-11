@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Coordinate website and iframe switches so their document snapshots cannot overlap. Rapid app/website toggles caused the Codex preview renderer to crash during verification.
+
+
 ## 1.1.0
 
 - Rename the repository and package to circular-theme-switch.

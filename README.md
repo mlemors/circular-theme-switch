@@ -22,7 +22,7 @@ Click the moon/sun or the large button. The new theme expands over the whole pag
 Install from GitHub (this package is not published on npm):
 
 ```sh
-npm install github:mlemors/circular-theme-switch#v1.1.0
+npm install github:mlemors/circular-theme-switch#v1.1.1
 ```
 
 ```js

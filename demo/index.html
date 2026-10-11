@@ -7,8 +7,6 @@
 <section class="app-section"><div class="section-label"><span>THE LISTENING ROOM</span><span>WEB + APP</span></div><div class="app-shell"><iframe src="app.html" title="Studio Radio app demo with its own theme switch"></iframe></div></section>
 </main>
 <script type="module">
-import { createThemeToggle } from '../src/index.js';
-const button=document.getElementById('website-theme');
-const theme=createThemeToggle({initialTheme:'light',storageKey:'circular-theme-switch:website',onChange(value){button.setAttribute('aria-pressed',String(value==='dark'));}});
-button.addEventListener('click',event=>theme.toggle(event));
+import {bindThemeSwitch} from './switch.js';
+bindThemeSwitch(document.getElementById('website-theme'),{initialTheme:'light',storageKey:'circular-theme-switch:website'});
 </script></body></html>

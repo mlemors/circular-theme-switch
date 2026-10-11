@@ -1,5 +1,5 @@
 {
-  "name": "@mlemors/circular-theme-switch", "version": "1.1.0", "type": "module",
+  "name": "@mlemors/circular-theme-switch", "version": "1.1.1", "type": "module",
   "description": "A circular light/dark theme reveal across the entire application window.",
   "license": "MIT", "author": "mlemors",
   "repository": { "type": "git", "url": "https://github.com/mlemors/circular-theme-switch.git" },
