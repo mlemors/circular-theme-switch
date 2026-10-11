@@ -2,6 +2,8 @@
 
 **Circular expanding dark/light theme switch.** A circular dark/light reveal that expands from your click across the entire application window.
 
+![Circular website and app theme switches in action](assets/demo.gif)
+
 [**Live demo →**](https://mlemors.github.io/circular-theme-switch/demo/)
 
 Zero runtime dependencies. Framework independent. Includes TypeScript declarations, keyboard origins, reduced-motion support, optional persistence, and a fallback for environments without same-document View Transitions.
@@ -15,7 +17,7 @@ npm run demo
 # Open http://localhost:4173/demo/
 ```
 
-Click the moon/sun or the large button. The new theme expands over the whole page in both directions, using the original 500 ms ease-out animation. The demo simulates a website and an embedded music app. Each has its own independent theme switch. The app runs in a same-origin iframe, so its circular reveal stays inside its window. Website and app preferences use separate storage keys.
+Click the circular switch in the website header or in the app title bar. The new theme expands over the whole page in both directions, using the original 500 ms ease-out animation. The demo simulates a website and an embedded music app. Each has its own independent theme switch. The app runs in a same-origin iframe, so its circular reveal stays inside its window. Website and app preferences use separate storage keys.
 
 ## Reuse it
 
