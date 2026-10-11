@@ -49,3 +49,11 @@ test('controller toggles both directions when storage is blocked', async () => {
   await theme.toggle(); assert.equal(theme.theme, 'light'); assert.ok(s.classes.has('light'));
   await theme.toggle(); assert.equal(theme.theme, 'dark'); assert.ok(s.classes.has('dark'));
 });
+
+test('snapshot group timing follows the requested reveal duration and is cleaned up', async () => {
+  const s = setup(); let durationDuringUpdate;
+  await revealTheme(() => { durationDuringUpdate = s.props.get('--theme-ripple-duration'); }, { duration: 750 });
+  assert.equal(durationDuringUpdate, '750ms');
+  assert.equal(s.calls[0][1].duration, 750);
+  assert.equal(s.props.has('--theme-ripple-duration'), false);
+});

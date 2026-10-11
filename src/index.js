@@ -13,6 +13,7 @@ export async function revealTheme(apply, { event, duration = 500, easing = 'ease
   const x = pointer ? event.clientX : rect ? rect.left + rect.width / 2 : innerWidth / 2;
   const y = pointer ? event.clientY : rect ? rect.top + rect.height / 2 : innerHeight / 2;
   const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  root.style.setProperty('--theme-ripple-duration', `${duration}ms`);
   root.style.setProperty('--theme-ripple-x', `${x}px`);
   root.style.setProperty('--theme-ripple-y', `${y}px`);
   root.classList.add('theme-ripple-active');
@@ -32,6 +33,7 @@ export async function revealTheme(apply, { event, duration = 500, easing = 'ease
     return true;
   } finally {
     root.classList.remove('theme-ripple-active');
+    root.style.removeProperty('--theme-ripple-duration');
     root.style.removeProperty('--theme-ripple-x');
     root.style.removeProperty('--theme-ripple-y');
   }

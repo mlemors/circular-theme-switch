@@ -22,7 +22,7 @@ Click the moon/sun or the large button. The new theme expands over the whole pag
 Install from GitHub (this package is not published on npm):
 
 ```sh
-npm install github:mlemors/theme-ripple#v1.0.0
+npm install github:mlemors/theme-ripple#v1.0.1
 ```
 
 ```js
@@ -110,6 +110,8 @@ The root snapshot covers the current document viewport, including app panels and
 3. Put the new snapshot above the old one, initially clipped to a zero-radius circle.
 4. Animate that circle to the farthest viewport corner using the Web Animations API.
 5. Remove the temporary styles when the transition finishes.
+
+The snapshot group duration is explicitly synchronized with the reveal duration (the browser default is only 250 ms). This prevents the parent animation ending halfway through the default 500 ms reveal. See [CHANGELOG.md](CHANGELOG.md) for the end-of-animation freeze investigation.
 
 The initial CSS clip prevents a full-frame flash before the animation attaches. CSS is scoped to the active ripple so other transitions keep their default behavior.
 
