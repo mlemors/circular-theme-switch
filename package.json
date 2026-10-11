@@ -1,0 +1,9 @@
+{
+  "name": "@mlemors/theme-ripple", "version": "1.0.0", "type": "module",
+  "description": "A circular light/dark theme reveal across the entire application window.",
+  "license": "MIT", "author": "mlemors",
+  "repository": { "type": "git", "url": "https://github.com/mlemors/theme-ripple.git" },
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" }, "./style.css": "./src/style.css" },
+  "files": ["src", "LICENSE", "NOTICE.md"],
+  "scripts": { "test": "node --test", "demo": "python3 -m http.server 4173" }
+}

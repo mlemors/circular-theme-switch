@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de" class="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Theme Ripple — Ein Klick. Ein neues Licht.</title>
+<link rel="stylesheet" href="../src/style.css"><link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<header><a href="#" class="brand"><span class="mark">◐</span> theme ripple</a><a href="https://github.com/mlemors/theme-ripple">GitHub ↗</a><button id="toggle" aria-label="Farbschema wechseln" title="Farbschema wechseln">☾</button></header>
+<main>
+<p class="eyebrow">A SMALL INTERACTION. A WHOLE NEW ATMOSPHERE.</p>
+<h1>Ein Klick.<br>Ein neues <em>Licht.</em></h1>
+<p class="intro">Vom Klickpunkt bis in jede Ecke. Ein fließender Wechsel zwischen Hell und Dunkel – über dein gesamtes Anwendungsfenster.</p>
+<div class="action"><button id="try">Licht wechseln <span>↗</span></button><span>Probiere auch den Schalter oben rechts.</span></div>
+<section class="preview" aria-label="Beispiel eines Anwendungsfensters">
+<div class="windowbar"><span class="dots">● ● ●</span><span>Dein nächstes Projekt</span><span>⌘ K</span></div>
+<div class="dashboard"><aside><strong>Workspace</strong><p class="selected">◈ Übersicht</p><p>▤ Projekte</p><p>◷ Aktivität</p><p>⚙ Einstellungen</p></aside><article><p class="eyebrow">ALLES IM BLICK</p><h2>Guten Abend, Maker.</h2><div class="stats"><div><small>Projekte</small><b>12</b></div><div><small>Im Flow</small><b>04</b></div><div><small>Möglichkeiten</small><b>∞</b></div></div><div class="chart" aria-label="Dekorative Aktivitätsgrafik"><i style="--h:30%"></i><i style="--h:46%"></i><i style="--h:39%"></i><i style="--h:62%"></i><i style="--h:51%"></i><i style="--h:80%"></i><i style="--h:67%"></i><i style="--h:95%"></i><i style="--h:78%"></i><i style="--h:100%"></i></div></article></div>
+</section>
+<section class="features"><div><span>01 / DER EFFEKT</span><h3>Das ganze Fenster.</h3><p>Ein kreisförmiger Reveal verbindet beide Farbschemata. Der Ursprung folgt deinem Klick.</p></div><div><span>02 / DIE INTEGRATION</span><h3>Dein Stack. Dein Stil.</h3><p>Keine Laufzeit-Abhängigkeiten. Für JavaScript, Vue, React und kompatible Desktop-Webviews.</p></div><div><span>03 / DIE DETAILS</span><h3>Bewegung mit Gefühl.</h3><p>500 ms, beide Richtungen. Bei reduzierter Bewegung erfolgt der Wechsel sofort.</p></div></section>
+</main><footer>Extrahiert aus <a href="https://github.com/Masterain98/discord-quest-helper">Discord Quest Helper</a> · MIT License</footer>
+<script type="module">
+import { createThemeToggle } from '../src/index.js';
+const button = document.querySelector('#toggle');
+const controller = createThemeToggle({ onChange(theme) { button.textContent = theme === 'dark' ? '☾' : '☀'; button.setAttribute('aria-pressed', String(theme === 'dark')); } });
+for (const id of ['toggle', 'try']) document.getElementById(id).addEventListener('click', event => controller.toggle(event));
+</script>
+</body></html>
