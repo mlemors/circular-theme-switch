@@ -1,9 +1,9 @@
 {
-  "name": "@mlemors/circular-theme-switch", "version": "1.1.1", "type": "module",
+  "name": "@mlemors/circular-theme-switch", "version": "1.1.2", "type": "module",
   "description": "A circular light/dark theme reveal across the entire application window.",
   "license": "MIT", "author": "mlemors",
   "repository": { "type": "git", "url": "https://github.com/mlemors/circular-theme-switch.git" },
   "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" }, "./style.css": "./src/style.css" },
-  "files": ["src", "LICENSE", "NOTICE.md", "CHANGELOG.md"],
+  "files": ["src", "LICENSE", "NOTICE.md", "CHANGELOG.md", "docs", "assets/demo.gif"],
   "scripts": { "test": "node --test", "demo": "python3 -m http.server 4173" }
 }

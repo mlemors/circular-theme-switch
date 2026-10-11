@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2
+
+- Replace demo switch icons with sun/moon icons showing the destination mode and descriptive accessible labels.
+- Shorten README and move framework guides and API reference into docs.
+- Refresh the README GIF.
+
+
 ## 1.1.1
 
 - Coordinate website and iframe switches so their document snapshots cannot overlap. Rapid app/website toggles caused the Codex preview renderer to crash during verification.
