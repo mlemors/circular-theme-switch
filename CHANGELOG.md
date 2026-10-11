@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.3
+
+- Re-record the README GIF at a constant viewport size; reduce it to under 1 MB.
+
+
 ## 1.1.2
 
 - Replace demo switch icons with sun/moon icons showing the destination mode and descriptive accessible labels.

@@ -9,7 +9,7 @@ A circular dark/light reveal that expands from your click. Zero runtime dependen
 ## Use it
 
 ```sh
-npm install github:mlemors/circular-theme-switch#v1.1.2
+npm install github:mlemors/circular-theme-switch#v1.1.3
 ```
 
 ```js
