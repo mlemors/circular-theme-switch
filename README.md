@@ -1,33 +1,33 @@
-# Theme Ripple ◐
+# Circular Theme Switch ◐
 
-**Ein Klick. Ein neues Licht.** A circular dark/light reveal that expands from your click across the entire application window.
+**Circular expanding dark/light theme switch.** A circular dark/light reveal that expands from your click across the entire application window.
 
-[**Live demo →**](https://mlemors.github.io/theme-ripple/demo/) · [Original project](https://github.com/Masterain98/discord-quest-helper)
+[**Live demo →**](https://mlemors.github.io/circular-theme-switch/demo/)
 
 Zero runtime dependencies. Framework independent. Includes TypeScript declarations, keyboard origins, reduced-motion support, optional persistence, and a fallback for environments without same-document View Transitions.
 
 ## Try it
 
 ```sh
-git clone https://github.com/mlemors/theme-ripple.git
-cd theme-ripple
+git clone https://github.com/mlemors/circular-theme-switch.git
+cd circular-theme-switch
 npm run demo
 # Open http://localhost:4173/demo/
 ```
 
-Click the moon/sun or the large button. The new theme expands over the whole page in both directions, using the original 500 ms ease-out animation. The demo doubles as a small presentation of the effect.
+Click the moon/sun or the large button. The new theme expands over the whole page in both directions, using the original 500 ms ease-out animation. The demo simulates a website and an embedded music app. Each has its own independent theme switch. The app runs in a same-origin iframe, so its circular reveal stays inside its window. Website and app preferences use separate storage keys.
 
 ## Reuse it
 
 Install from GitHub (this package is not published on npm):
 
 ```sh
-npm install github:mlemors/theme-ripple#v1.0.1
+npm install github:mlemors/circular-theme-switch#v1.1.0
 ```
 
 ```js
-import { createThemeToggle } from '@mlemors/theme-ripple';
-import '@mlemors/theme-ripple/style.css';
+import { createThemeToggle } from '@mlemors/circular-theme-switch';
+import '@mlemors/circular-theme-switch/style.css';
 
 const theme = createThemeToggle({ initialTheme: 'dark' });
 document.querySelector('#theme-button').addEventListener('click', e => theme.toggle(e));
@@ -50,8 +50,8 @@ Use the low-level API with your existing reactive state. Wait for Vue's DOM upda
 ```vue
 <script setup>
 import { ref, nextTick } from 'vue';
-import { revealTheme } from '@mlemors/theme-ripple';
-import '@mlemors/theme-ripple/style.css';
+import { revealTheme } from '@mlemors/circular-theme-switch';
+import '@mlemors/circular-theme-switch/style.css';
 const dark = ref(true);
 async function toggle(event) {
   await revealTheme(async () => {
@@ -74,8 +74,8 @@ Commit React state before the browser takes its new snapshot:
 ```jsx
 import { useState } from 'react';
 import { flushSync } from 'react-dom';
-import { revealTheme } from '@mlemors/theme-ripple';
-import '@mlemors/theme-ripple/style.css';
+import { revealTheme } from '@mlemors/circular-theme-switch';
+import '@mlemors/circular-theme-switch/style.css';
 
 export function ThemeButton() {
   const [dark, setDark] = useState(true);
@@ -115,6 +115,6 @@ The snapshot group duration is explicitly synchronized with the reveal duration 
 
 The initial CSS clip prevents a full-frame flash before the animation attaches. CSS is scoped to the active ripple so other transitions keep their default behavior.
 
-## Attribution & license
+## License
 
-MIT. Extracted from `src/App.vue` and `src/style.css` in [Masterain98/discord-quest-helper](https://github.com/Masterain98/discord-quest-helper/tree/8c1fcd1ebddde583ce3e0c89caf9d7af235b5542). Original copyright © 2025 Masterain is retained in [LICENSE](LICENSE). See [NOTICE.md](NOTICE.md) for extraction details.
+MIT. See [LICENSE](LICENSE).

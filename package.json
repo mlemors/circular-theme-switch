@@ -1,8 +1,8 @@
 {
-  "name": "@mlemors/theme-ripple", "version": "1.0.1", "type": "module",
+  "name": "@mlemors/circular-theme-switch", "version": "1.1.0", "type": "module",
   "description": "A circular light/dark theme reveal across the entire application window.",
   "license": "MIT", "author": "mlemors",
-  "repository": { "type": "git", "url": "https://github.com/mlemors/theme-ripple.git" },
+  "repository": { "type": "git", "url": "https://github.com/mlemors/circular-theme-switch.git" },
   "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" }, "./style.css": "./src/style.css" },
   "files": ["src", "LICENSE", "NOTICE.md", "CHANGELOG.md"],
   "scripts": { "test": "node --test", "demo": "python3 -m http.server 4173" }

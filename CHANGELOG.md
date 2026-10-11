@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0
+
+- Rename the repository and package to circular-theme-switch.
+- Replace the explanatory landing page with a minimal editorial website simulation.
+- Add an independently themed embedded music app; its reveal is confined to the app document.
+- Remove visible project-origin references and feature copy. Preserve required MIT copyright.
+
 ## 1.0.1
 
 - Synchronize `::view-transition-group(root)` with the requested reveal duration instead of relying on the browser's 250 ms default. Previously the group finished halfway through the default 500 ms clip-path animation.
